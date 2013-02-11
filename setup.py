@@ -22,7 +22,7 @@ class smart_install_data(install_data):
 
 # data files
 
-DocFiles = [os.path.join('doc', x) for x in os.listdir('doc')]
+
 
 
 # build archives
@@ -32,7 +32,6 @@ setup(
 	packages = ['whois'],
 	package_dir = {'whois': ''},
 	data_files=[
-		('whois/doc', DocFiles),
 	],
 	cmdclass = {'install_data':smart_install_data},
 	description='Whois requester',
