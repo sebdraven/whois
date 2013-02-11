@@ -1,0 +1,27 @@
+Metadata-Version: 1.0
+Name: whois
+Version: 0.2.0
+Summary: Retrieves computer location from IP
+Home-page: http://philipjm.free.fr/blog/
+Author: Jean-Michel Philippe
+Author-email: jean-michel.philippe@libertysurf.fr
+License: GNU GPL v2
+Description: 
+        Guess host location from their IP, based on whois services.
+        
+        2 method are implemented:
+        
+        * IP searched in a local database
+        * IP searched on an Internet whois service
+        
+        Search results are stored in a local database to speedup further identical
+        searches. Use of former results can be disabled. Internet whois search can
+        be disabled too.
+        
+        Local databases can be downloaded/updated from:
+        http://software77.net/cgi-bin/ip-country/geo-ip.pl
+        http://ip-to-country.webhosting.info/node/view/6
+        
+        Full Internet whois queries may also be accessed.
+        
+Platform: any
