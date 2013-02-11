@@ -1,0 +1,83 @@
+###################
+# whois - a python whois service
+#
+# whois is a service dedicated at discovering machines
+# from their IP address.
+#
+# Copyright Jean-Michel Philippe (c) 2007
+#   <http://philipjm.free.fr/blog/>
+#
+# This is open source software released under the GPL license.
+# The full text of this license is found in the file 'LICENSE',
+# included with this source code package.
+###################
+
+Credits
+=======
+
+* Original code to query whois Internet servers from Fredrik Lundh
+ <effbot@telia.com> posted on:
+   http://mail.python.org/pipermail/python-list/2000-March/028122.html
+
+Installation
+============
+
+Linux
+-----
+
+Uncompress the archive and install the Python module as root:
+
+# git clone git@github.com:sebdraven/whois.git
+# cd whois/
+# python setup.py install
+
+You're done!
+
+Typical use
+===========
+
+Import whois module:
+
+
+Full Internet whois query:
+
+ >>> Whois = whois.WhoisConsumer('194.109.137.218')
+ >>> whois.WhoisRequest(Whois, '194.109.137.218', whois.WhoisServer)
+ <whois._whois.WhoisRequest at -0x4a62ce74>
+ >>> whois.asyncore.loop()
+ >>> print Whois.text
+ 
+ OrgName:    RIPE Network Coordination Centre
+ OrgID:      RIPE
+ Address:    P.O. Box 10096
+ City:       Amsterdam
+ StateProv:
+ PostalCode: 1001EB
+ Country:    NL
+ 
+ ReferralServer: whois://whois.ripe.net:43
+ 
+ NetRange:   194.0.0.0 - 194.255.255.255
+ CIDR:       194.0.0.0/8
+ NetName:    RIPE-CBLK2
+ NetHandle:  NET-194-0-0-0-1
+ Parent:
+ NetType:    Allocated to RIPE NCC
+ NameServer: NS-PRI.RIPE.NET
+ NameServer: NS3.NIC.FR
+ NameServer: SUNIC.SUNET.SE
+ NameServer: NS-EXT.ISC.ORG
+ NameServer: SEC1.APNIC.NET
+ NameServer: SEC3.APNIC.NET
+ NameServer: TINNIE.ARIN.NET
+ Comment:    These addresses have been further assigned to users in
+ Comment:    the RIPE NCC region. Contact information can be found in
+ Comment:    the RIPE database at http://www.ripe.net/whois
+ RegDate:    1993-07-21
+ Updated:    2005-08-03
+ 
+ # ARIN WHOIS database, last updated 2007-03-24 19:10
+ # Enter ? for additional hints on searching ARIN's WHOIS database.
+
+
+
